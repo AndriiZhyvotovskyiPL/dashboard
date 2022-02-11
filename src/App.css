@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.appWrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: auto;
+  font-size: 1.6rem;
+}
+
+button{
+  transition: all 1s;
+  border-radius: 0.8rem;
+  height: 3rem;
+  width: 8rem;
+}
+
+button::first-letter, .head td::first-letter, .heading span::first-letter, thead td::first-letter {
+  text-transform: uppercase;
+}
+
+#cancelBtn {
+  margin-right: 2rem;
+  border: 1px red solid;
+  color: red;
+  background-color: white;
+}
+
+#cancelBtn:hover {
+  background-color: red;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#editBtn{
+  border: 1px solid orange;
+  background-color: orange;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submitBtn {
+  border: 1px darkseagreen solid;
+  background-color: darkseagreen;
+  color: white;
+}
+
+.submitBtn:hover {
+  background-color: green;
+  border: 1px green solid;
+}
+
+#dash {
+  font-size: 3.5rem;
+  font-weight: bold;
+  padding: 3rem 0;
+}
+
+.users {
+  display: grid;
+  grid-template-columns: 4rem repeat(5, 1fr);
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.5rem;
+  margin-top: -2rem;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+thead {
+  font-weight: bold;
+}
+
+tr {
+  height: 8rem;
+  border: 1px solid black;
+}
+
+td {
+  padding: 0 2rem;
+}
+
+.idCol {
+  width: 6rem;
+}
+
+.nameCol, .usernameCol, .cityCol, .emailCol {
+  width: 24rem;
+}
+
+#editInput input{
+  height: 3rem;
+  border: black 1px solid;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+
+#newUser {
+  border-radius: 10px;
+}
+
+#newUser input{
+  width: 50rem;
+  height: 3rem;
+  margin-left: 10rem;
+}
+
+#newUser label {
+  padding-left: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+#newUserBtn {
+  border: 1px cornflowerblue solid;
+  color: white;
+  background-color: cornflowerblue;
+}
+
+#newUserBtn:hover {
+  background-color: blue;
+}
+
+.deleteBtn{
+  border: 1px red solid;
+  background-color: red;
+  color: white;
+}
+
+#submit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.error {
+  font-size: 1.2rem;
+  color: red;
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+}
+
+.error p {
+  grid-column: 2/-1;
+  align-self: start;
+}
+
+.errorInput {
+  border:solid 1px red;
+}
+
+.form {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 1px 1px 5px grey;
+}
+
+#modal {
+  width: 100%;
+  height: 15rem;
+  background-color: white;
+  font-size: 2rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+#modal div {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#modalBtn {
+  display: flex;
+  justify-content: space-around;
 }
