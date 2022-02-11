@@ -49,10 +49,8 @@ export const addUser = (userData) => {
 export const changeUserData = (id, userData) => {
    return (dispatch, getState) => {
       const users = getState().users.users;
-      console.log('here');
       for (let i = 0; i < users.length; i++) {
          if (users[i].id === id) {
-            console.log('if');
             users[i] = {
                id: userData.id,
                name: userData.name,

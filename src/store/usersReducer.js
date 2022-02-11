@@ -29,7 +29,6 @@ const usersReducer = (state = initialState, action) => {
          return { ...state };
 
       case types.CHANGE_USER_DATA:
-         console.log(action.payload.users);
          return { ...state, isLoaded: true, users: [...action.payload.users] };
 
       case types.CHANGE_USER_DATA_ERROR:

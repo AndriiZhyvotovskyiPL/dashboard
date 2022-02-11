@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { applyMiddleware, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import rootReducer from './store/rootReducer';
 
@@ -13,13 +13,13 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducer, compose(composeEnhancers(applyMiddleware(thunk))));
 
 ReactDOM.render(
-   <BrowserRouter>
+   <HashRouter>
       <React.StrictMode>
          <Provider store={store}>
             <App />
          </Provider>
       </React.StrictMode>
-   </BrowserRouter>,
+   </HashRouter>,
    document.getElementById('root')
 );
 
