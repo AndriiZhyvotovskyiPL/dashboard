@@ -11,9 +11,7 @@ const UserData = ({ user, deleteUser, changeUserData }) => {
       email: user.email,
    });
 
-   const [Modal, open, close] = useModal('root', {
-      preventScroll: true,
-   });
+   const [Modal, open, close] = useModal('root', {});
 
    const handleChange = (e) => {
       setUpdateData((prevState) => {
